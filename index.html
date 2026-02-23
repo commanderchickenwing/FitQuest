@@ -250,8 +250,8 @@ textarea.fc{resize:vertical;min-height:72px}
   cursor:pointer;border:1.5px solid var(--border);
   background:var(--card);box-shadow:var(--sh0);
   transition:all .2s cubic-bezier(.22,1,.36,1);
-  min-height:130px;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:1.1rem;
+  min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.2rem;
 }
 .muscle-tile:hover{
   transform:translateY(-4px) scale(1.015);
@@ -259,15 +259,15 @@ textarea.fc{resize:vertical;min-height:72px}
 }
 .muscle-tile:active{transform:translateY(-1px) scale(1.005)}
 .mt-bg{
-  position:absolute;inset:0;opacity:.07;font-size:5rem;
+  position:absolute;inset:0;opacity:.09;font-size:6.5rem;
   display:flex;align-items:center;justify-content:center;
   pointer-events:none;transition:opacity .2s;
 }
-.muscle-tile:hover .mt-bg{opacity:.14}
+.muscle-tile:hover .mt-bg{opacity:.18}
 .mt-accent{position:absolute;top:0;left:0;right:0;height:4px;background:var(--acc-grd)}
-.mt-name{font-family:var(--ff-d);font-size:1.15rem;font-style:italic;position:relative;z-index:1}
-.mt-count{font-size:.72rem;color:var(--t2);position:relative;z-index:1;margin-top:.1rem}
-.mt-desc{font-size:.68rem;color:var(--t3);position:relative;z-index:1;margin-top:.08rem;transition:color var(--tr-t)}
+.mt-name{font-family:var(--ff-d);font-size:1.25rem;font-style:italic;position:relative;z-index:1}
+.mt-count{font-size:.74rem;color:var(--t2);position:relative;z-index:1;margin-top:.12rem}
+.mt-desc{font-size:.7rem;color:var(--t3);position:relative;z-index:1;margin-top:.1rem;transition:color var(--tr-t)}
 .mt-arr{position:absolute;right:1rem;bottom:1rem;width:32px;height:32px;border-radius:50%;background:var(--acc-grd);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;transition:transform .2s}
 .muscle-tile:hover .mt-arr{transform:translateX(3px)}
 
@@ -409,14 +409,14 @@ textarea.fc{resize:vertical;min-height:72px}
 .wkday{
   min-height:165px;background:var(--card);border:1.5px solid var(--border);border-radius:var(--r2);
   padding:.72rem;display:flex;flex-direction:column;gap:.32rem;
-  cursor:pointer;transition:all .15s ease;
+  cursor:pointer;transition:all .15s ease;overflow:visible;
 }
 .wkday:hover{border-color:var(--acc);box-shadow:var(--sh1);transform:translateY(-1px)}
 .wkday:active{transform:translateY(0)}
 .wkday.today{border-color:var(--acc);background:var(--accl)}
 .wkdh{font-size:.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--t3)}
 .wkdd{font-family:var(--ff-d);font-size:1.15rem;line-height:1;margin-bottom:.3rem;font-style:italic}
-.wkdw{flex:1;display:flex;flex-direction:column;gap:.28rem}
+.wkdw{flex:1;display:flex;flex-direction:column;gap:.28rem;overflow:visible}
 .plantag{
   background:var(--accl);color:var(--acc);border:1px solid var(--acc);
   border-radius:6px;padding:.22rem .4rem;font-size:.68rem;font-weight:600;
@@ -440,13 +440,13 @@ textarea.fc{resize:vertical;min-height:72px}
 }
 .aw-title{font-family:var(--ff-d);font-size:1.3rem;font-style:italic}
 /* Circle timer */
-.aw-timer-wrap{position:relative;width:64px;height:64px;flex-shrink:0}
-.aw-timer-svg{width:64px;height:64px;transform:rotate(-90deg)}
-.aw-ring-bg{fill:none;stroke:rgba(255,255,255,.2);stroke-width:5}
-.aw-ring-fill{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;
-  stroke-dasharray:213.6;stroke-dashoffset:0;transition:stroke-dashoffset 1s linear;opacity:.9}
+.aw-timer-wrap{position:relative;width:90px;height:90px;flex-shrink:0}
+.aw-timer-svg{width:90px;height:90px;transform:rotate(-90deg)}
+.aw-ring-bg{fill:none;stroke:rgba(255,255,255,.2);stroke-width:6}
+.aw-ring-fill{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;
+  stroke-dasharray:238.8;stroke-dashoffset:0;transition:stroke-dashoffset 1s linear;opacity:.9}
 .aw-timer-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-family:'Courier New',monospace;font-size:.75rem;font-weight:bold;letter-spacing:.03em;color:#fff}
+  font-family:'Courier New',monospace;font-size:1rem;font-weight:bold;letter-spacing:.04em;color:#fff}
 .aw-body{padding:1.4rem;max-width:600px;margin:0 auto;width:100%;flex:1;display:flex;flex-direction:column;gap:0}
 .aw-prog{background:var(--bg2);border-radius:50px;height:6px;margin-bottom:.5rem;overflow:hidden;transition:background var(--tr-t)}
 .aw-prog-bar{height:100%;background:var(--acc-grd);border-radius:50px;transition:width .5s cubic-bezier(.22,1,.36,1)}
@@ -493,7 +493,7 @@ textarea.fc{resize:vertical;min-height:72px}
 .aw-set-cell{display:flex;flex-direction:column}
 .aw-set-row.done-set .aw-set-input,.aw-set-row.skip-set .aw-set-input{pointer-events:none}
 /* Check button */
-.aw-set-actions{display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-bottom:2rem}
+.aw-set-actions{display:flex;flex-direction:column;align-items:center;gap:1.6rem;margin-bottom:2rem}
 .aw-check-big{
   width:80px;height:80px;border-radius:50%;
   border:3px solid var(--ok);background:var(--card);
@@ -729,30 +729,61 @@ canvas{display:block;width:100%}
 .ob-pr-row{display:grid;grid-template-columns:1fr 90px 68px;gap:.4rem;align-items:center;font-size:.82rem}
 .ob-pr-name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
+/* ─── MOBILE BOTTOM NAV ─── */
+#mobileNav{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--card);border-top:1px solid var(--border);
+  z-index:900;box-shadow:0 -2px 16px rgba(10,8,4,.08);
+  transition:background var(--tr-t),border-color var(--tr-t);
+  padding-bottom:env(safe-area-inset-bottom,0);
+}
+.mob-nav-items{display:flex;align-items:stretch}
+.mob-nav-item{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:.55rem .2rem .45rem;
+  text-decoration:none;color:var(--t3);font-size:.58rem;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  cursor:pointer;border:none;background:none;
+  transition:color .15s ease;position:relative;
+}
+.mob-nav-item::before{
+  content:'';position:absolute;top:0;left:20%;right:20%;height:2px;
+  background:var(--acc-grd);border-radius:0 0 4px 4px;
+  transform:scaleX(0);transition:transform .2s cubic-bezier(.22,1,.36,1);
+}
+.mob-nav-item.on{color:var(--acc)}
+.mob-nav-item.on::before{transform:scaleX(1)}
+.mob-nav-ico{font-size:1.25rem;line-height:1}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:960px){.charts{grid-template-columns:1fr}.wkgrid{grid-template-columns:repeat(4,1fr)}.weekrow{grid-template-columns:repeat(4,1fr)}}
+
+/* LIBRARY: bigger tiles on desktop handled by base styles */
+
 @media(max-width:640px){
-  .navlinks{display:none}
-  .navlinks.open{display:flex;flex-direction:column;position:fixed;top:var(--nav);left:0;right:0;background:var(--card);border-bottom:1px solid var(--border);padding:.38rem 0;z-index:899;box-shadow:var(--sh2);transition:background var(--tr-t)}
-  .navlinks.open a{height:auto;line-height:1;padding:.78rem 1.2rem}
-  .navlinks.open a::after{display:none}
-  .navlinks.open a.on{background:var(--accl);color:var(--acc)}
-  .burger{display:flex}
-  .page{padding:1rem .9rem 5rem}
+  /* Hide top nav links and burger — use bottom nav instead */
+  .navlinks{display:none!important}
+  .burger{display:none!important}
+  /* Hide floating next pill on mobile */
+  #nextPill{display:none!important}
+  /* Add bottom padding so content clears the bottom nav */
+  .page{padding:1rem .9rem 5.5rem}
+  #mobileNav{display:block}
+
   .pt{font-size:1.5rem}
   .wkgrid{grid-template-columns:repeat(2,1fr)}
   .weekrow{grid-template-columns:repeat(2,1fr)}
   .wkinputs{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(2,1fr)}
   .ph{flex-direction:column;align-items:flex-start}
-  .muscle-tiles{grid-template-columns:repeat(2,1fr)}
+  .muscle-tiles{grid-template-columns:repeat(2,1fr);gap:.75rem}
+  .muscle-tile{min-height:110px}
   .option-grid{grid-template-columns:repeat(3,1fr)}
   .aw-set{grid-template-columns:1.4rem 1fr 1fr auto}
   .aw-nc{display:none}
   .modal,.modal-w,.modal-lg{max-width:99vw;border-radius:var(--r2)}
   .fg-row.c2,.fg-row.c3,.fg-row.c4{grid-template-columns:1fr 1fr}
-  #nextPill .pill-label{display:none}
-  #nextPill{padding:.6rem}
 }
 </style>
 </head>
@@ -934,6 +965,18 @@ canvas{display:block;width:100%}
 
 </main>
 
+<!-- ═══ MOBILE BOTTOM NAV ═══ -->
+<nav id="mobileNav">
+  <div class="mob-nav-items">
+    <button class="mob-nav-item" data-p="dash" onclick="go('dash')"><span class="mob-nav-ico">🏠</span>Home</button>
+    <button class="mob-nav-item" data-p="start" onclick="go('start')"><span class="mob-nav-ico">▶️</span>Start</button>
+    <button class="mob-nav-item" data-p="build" onclick="go('build')"><span class="mob-nav-ico">🔨</span>Build</button>
+    <button class="mob-nav-item" data-p="plan" onclick="go('plan')"><span class="mob-nav-ico">📅</span>Plan</button>
+    <button class="mob-nav-item" data-p="track" onclick="go('track')"><span class="mob-nav-ico">📈</span>Track</button>
+    <button class="mob-nav-item" data-p="set" onclick="go('set')"><span class="mob-nav-ico">⚙️</span>Settings</button>
+  </div>
+</nav>
+
 <!-- ═══ FLOATING NEXT PILL ═══ -->
 <button id="nextPill" onclick="goNext()" aria-label="Go to next section">
   <span class="pill-ico">›</span>
@@ -949,9 +992,9 @@ canvas{display:block;width:100%}
     </div>
     <div style="display:flex;align-items:center;gap:.8rem">
       <div class="aw-timer-wrap">
-        <svg class="aw-timer-svg" viewBox="0 0 80 80">
-          <circle class="aw-ring-bg" cx="40" cy="40" r="34"/>
-          <circle class="aw-ring-fill" id="awRingFill" cx="40" cy="40" r="34"/>
+        <svg class="aw-timer-svg" viewBox="0 0 90 90">
+          <circle class="aw-ring-bg" cx="45" cy="45" r="38"/>
+          <circle class="aw-ring-fill" id="awRingFill" cx="45" cy="45" r="38"/>
         </svg>
         <div class="aw-timer-text" id="awTimer">00:00</div>
       </div>
@@ -979,7 +1022,14 @@ canvas{display:block;width:100%}
           <button class="aw-check-big" id="awCheckBtn" onclick="markCurrentSet()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </button>
-          <button class="aw-skip-set-btn" id="awSkipSetBtn" onclick="skipCurrentSet()">Skip set</button>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;width:100%">
+            <div style="display:flex;align-items:center;gap:.6rem;width:80%;opacity:.4">
+              <div style="flex:1;height:1px;background:var(--border)"></div>
+              <span style="font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)">or</span>
+              <div style="flex:1;height:1px;background:var(--border)"></div>
+            </div>
+            <button class="aw-skip-set-btn" id="awSkipSetBtn" onclick="skipCurrentSet()">Skip this set</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1033,7 +1083,7 @@ canvas{display:block;width:100%}
   <div class="modal-lg">
     <div class="mhd">
       <div><h2 class="mtitle">✦ AI Workout Generator</h2><div style="font-size:.76rem;color:var(--t3)">Answer a few questions — get a custom workout</div></div>
-      <button class="mclose" onclick="closeOv('ovAIGen')">×</button>
+      <button class="mclose" onclick="closeOv('ovAIGen');AG={step:1,diff:'',dur:0,muscles:[],equips:[]}">×</button>
     </div>
     <div class="aigen-progress"><div class="aigen-progress-bar" id="aigenBar" style="width:0%"></div></div>
     <div class="aigen-step on" id="aigenStep1">
@@ -1409,6 +1459,7 @@ function go(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   ge('page-'+page).classList.add('on');
   document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('on',a.dataset.p===page));
+  document.querySelectorAll('.mob-nav-item').forEach(b=>b.classList.toggle('on',b.dataset.p===page));
   ge('navlinks').classList.remove('open');
   curPage=page;
   // update pill label
@@ -1773,6 +1824,10 @@ ge('ovAIGen').addEventListener('click',e=>{
 function openAIGen(){
   AG={step:1,diff:'',dur:0,muscles:[],equips:[]};
   for(let i=1;i<=AG_STEPS;i++)ge('aigenStep'+i).className='aigen-step'+(i===1?' on':'');
+  // Reset all selection buttons
+  document.querySelectorAll('#ovAIGen .opt-btn').forEach(b=>b.classList.remove('sel'));
+  document.querySelectorAll('#ovAIGen .msel-btn').forEach(b=>b.classList.remove('sel'));
+  document.querySelectorAll('#ovAIGen .equip-btn').forEach(b=>b.classList.remove('sel'));
   // Build muscle buttons
   ge('aigenMuscles').innerHTML=ALL_MUSCLES.map(m=>`<button class="msel-btn" data-muscle="${m}">${MICONS[m]||'💪'} ${cap(m)}</button>`).join('');
   // Build equip buttons
@@ -2101,7 +2156,7 @@ function startWorkout(date,wkId){
   ge('awDate').textContent=fmtDate(wdate);
   ge('awTimer').textContent='00:00';
   // Timer: count up, circle fills based on planned duration, goes full after
-  const CIRCUMFERENCE=213.6;
+  const CIRCUMFERENCE=238.8; // 2π×38
   const ring=ge('awRingFill');
   ring.style.strokeDashoffset=CIRCUMFERENCE; // start empty
   AWS.iv=setInterval(()=>{
