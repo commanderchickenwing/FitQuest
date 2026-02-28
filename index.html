@@ -312,7 +312,63 @@ textarea.fc{resize:vertical;min-height:72px}
 .wklbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;color:var(--t3);text-align:center;margin-top:.1rem}
 .wkactions{display:flex;flex-direction:column;gap:.2rem}
 
-/* ─── AI CHAT ─── */
+/* ─── AI PREVIEW EXERCISE ROWS ─── */
+.aig-preview-box{border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;margin-bottom:.85rem}
+.aig-preview-hd{padding:.72rem 1rem;background:var(--bg2);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--t2);transition:background var(--tr-t)}
+.aig-timed-note{font-size:.72rem;color:var(--t3);padding:.45rem .8rem .55rem;background:var(--bg2);border-top:1px solid var(--border)}
+.aig-ex-list{padding:.4rem .75rem}
+.aig-ex-row{display:flex;align-items:flex-start;gap:.65rem;padding:.6rem 0;border-bottom:1px solid var(--border)}
+.aig-ex-row:last-child{border-bottom:none}
+.aig-ex-num{width:1.5rem;text-align:center;font-size:.78rem;font-weight:700;color:var(--t3);padding-top:.15rem;flex-shrink:0}
+.aig-ex-body{flex:1;min-width:0}
+.aig-ex-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+.aig-ex-name{font-weight:700;font-size:.88rem;line-height:1.3}
+.aig-ex-scheme{font-size:.74rem;color:var(--t2);margin-top:.1rem}
+.aig-ex-acts{display:flex;align-items:center;gap:.4rem;flex-shrink:0}
+.aig-diff-hint{font-size:.7rem;color:var(--t3);margin-top:.25rem}
+.aig-info-btn{background:var(--accl)!important;color:var(--acc)!important;border-color:var(--acc)!important;font-size:.78rem!important;font-weight:700!important;padding:.32rem .72rem!important;border-radius:var(--rpill)!important;gap:.3rem;white-space:nowrap}
+.aig-info-btn:hover{background:var(--acc)!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 3px 10px rgba(91,58,255,.3)}
+.aig-info-ico{background:var(--accl)!important;color:var(--acc)!important;border-color:var(--acc)!important;font-size:.82rem!important;font-weight:800!important;padding:.28rem .5rem!important;border-radius:var(--r1)!important;line-height:1}
+.aig-info-ico:hover{background:var(--acc)!important;color:#fff!important}
+.aig-remove-btn{background:var(--badl)!important;color:var(--bad)!important;border-color:var(--bad)!important;font-size:.95rem!important;font-weight:700!important;padding:.3rem .6rem!important;min-width:2rem;border-radius:var(--r1)!important}
+.aig-remove-btn:hover{background:var(--bad)!important;color:#fff!important;transform:translateY(-1px)}
+/* Add exercise to AI preview */
+.aig-add-panel{margin-top:.75rem;border:1.5px dashed var(--acc);border-radius:var(--r2);overflow:hidden}
+.aig-add-panel-hd{display:flex;align-items:center;justify-content:space-between;padding:.6rem .9rem;background:var(--accl);cursor:pointer;user-select:none}
+.aig-add-panel-hd-label{font-size:.82rem;font-weight:700;color:var(--acc);display:flex;align-items:center;gap:.45rem}
+.aig-add-panel-body{padding:.65rem .9rem;background:var(--card);border-top:1px solid var(--border);transition:background var(--tr-t)}
+.aig-add-search{display:flex;gap:.4rem;margin-bottom:.5rem;flex-wrap:wrap}
+.aig-add-search .fc{flex:1;min-width:100px;padding:.38rem .65rem;font-size:.82rem}
+.aig-add-equip-chips{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.5rem}
+.aig-add-equip-chip{padding:.18rem .55rem;border-radius:var(--rpill);font-size:.7rem;font-weight:600;border:1.5px solid var(--border);background:transparent;color:var(--t2);cursor:pointer;transition:all .12s ease}
+.aig-add-equip-chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.aig-add-equip-chip:hover:not(.on){border-color:var(--acc);color:var(--acc);background:var(--accl)}
+.aig-add-ex-list{max-height:190px;overflow-y:auto}
+.aig-add-ex-row{display:flex;align-items:center;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--border);gap:.4rem}
+.aig-add-ex-row:last-child{border-bottom:none}
+.aig-add-ex-name{font-weight:600;font-size:.81rem}
+.aig-add-ex-meta{font-size:.68rem;color:var(--t3)}
+
+/* ─── EXERCISE INFO PANEL ─── */
+.exinfo-section{margin-bottom:.85rem}
+.exinfo-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--t3);margin-bottom:.3rem}
+.exinfo-text{font-size:.86rem;line-height:1.75;color:var(--t1);white-space:pre-line}
+.exinfo-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.25rem}
+
+/* ─── BUILDER IMPROVEMENTS ─── */
+.bld-filter-row{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem}
+.bld-equip-chip{padding:.22rem .65rem;border-radius:var(--rpill);font-size:.72rem;font-weight:600;border:1.5px solid var(--border);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s ease}
+.bld-equip-chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.bld-equip-chip:hover:not(.on){border-color:var(--acc);color:var(--acc);background:var(--accl)}
+.bld-new-hint{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r1);padding:.6rem .85rem;margin-top:.6rem;display:flex;align-items:center;justify-content:space-between;gap:.65rem;flex-wrap:wrap;transition:background var(--tr-t)}
+.bld-new-hint-text{font-size:.78rem;color:var(--t2);line-height:1.5}
+.bld-new-hint strong{color:var(--t1)}
+.bld-picker-ex-row{display:flex;align-items:center;justify-content:space-between;padding:.38rem 0;border-bottom:1px solid var(--border);gap:.4rem}
+.bld-picker-ex-row:last-child{border-bottom:none}
+.bld-picker-ex-info{flex:1;min-width:0}
+.bld-picker-ex-name{font-weight:600;font-size:.82rem;line-height:1.3}
+.bld-picker-ex-meta{font-size:.7rem;color:var(--t3);margin-top:.05rem}
+.bld-picker-ex-acts{display:flex;gap:.25rem;flex-shrink:0}
 .ai-chat{
   display:flex;flex-direction:column;height:400px;
   border:1.5px solid var(--border);border-radius:var(--r2);overflow:hidden;
@@ -1266,7 +1322,7 @@ canvas{display:block;width:100%}
   <div class="modal">
     <div class="mhd"><h2 class="mtitle" id="exDetName"></h2><button class="mclose" onclick="closeOv('ovEx')">×</button></div>
     <div id="exDetTags" class="flex gap fw" style="margin-bottom:.75rem"></div>
-    <p id="exDetDesc" class="tc" style="line-height:1.8;margin-bottom:.85rem"></p>
+    <div id="exDetDesc" class="tc" style="line-height:1.8;margin-bottom:.85rem"></div>
     <div id="exDetPR" class="hide"></div>
     <div class="mfoot">
       <button class="btn btn-s" onclick="closeOv('ovEx')">Close</button>
@@ -1352,11 +1408,30 @@ canvas{display:block;width:100%}
       </div>
       <div id="bldExList"></div>
     </div>
-    <details style="margin-bottom:.5rem">
-      <summary style="cursor:pointer;font-size:.82rem;font-weight:700;color:var(--acc);user-select:none;list-style:none">+ Browse &amp; Add Exercises</summary>
-      <div style="margin-top:.5rem">
-        <input type="search" class="fc" id="bldQ" placeholder="Search exercises…" style="margin-bottom:.42rem">
-        <div id="bldPicker" style="max-height:200px;overflow-y:auto"></div>
+    <details style="margin-bottom:.5rem" open>
+      <summary style="cursor:pointer;font-size:.82rem;font-weight:700;color:var(--acc);user-select:none;list-style:none;margin-bottom:.5rem">+ Browse &amp; Add Exercises</summary>
+      <div>
+        <input type="search" class="fc" id="bldQ" placeholder="🔍 Search by name or muscle…" style="margin-bottom:.42rem">
+        <div class="bld-filter-row" id="bldEquipFilter">
+          <button class="bld-equip-chip on" data-equip="">All</button>
+          <button class="bld-equip-chip" data-equip="bodyweight">🤸 Bodyweight</button>
+          <button class="bld-equip-chip" data-equip="dumbbell">🏋️ Dumbbells</button>
+          <button class="bld-equip-chip" data-equip="barbell">🔩 Barbell</button>
+          <button class="bld-equip-chip" data-equip="cable">🔗 Cable</button>
+          <button class="bld-equip-chip" data-equip="machine">⚙️ Machine</button>
+          <button class="bld-equip-chip" data-equip="band">🔁 Bands</button>
+          <button class="bld-equip-chip" data-equip="kettlebell">🫙 Kettlebell</button>
+          <button class="bld-equip-chip" data-equip="pullup_bar">🚪 Pull-Up Bar</button>
+        </div>
+        <div id="bldPicker" style="max-height:220px;overflow-y:auto;margin-top:.3rem"></div>
+        <div id="bldPickerMore" style="text-align:center;margin-top:.4rem"></div>
+        <div class="bld-new-hint">
+          <div class="bld-new-hint-text">
+            <strong>Don't see your exercise?</strong><br>
+            You can add custom exercises to your library — just describe it and our AI will set it up.
+          </div>
+          <button class="btn btn-ai btn-sm" onclick="closeOv('ovBuild');openCustomEx()">✦ Add Custom Exercise</button>
+        </div>
       </div>
     </details>
     <div class="mfoot">
@@ -1417,6 +1492,23 @@ canvas{display:block;width:100%}
     <div class="mfoot">
       <button class="btn btn-s" onclick="closeOv('ovWeightLog')">Cancel</button>
       <button class="btn btn-ok" onclick="saveWeightLog()">Save ✓</button>
+    </div>
+  </div>
+</div>
+
+<!-- Exercise Info (How-To) Modal -->
+<div class="ov" id="ovExInfo">
+  <div class="modal modal-w">
+    <div class="mhd">
+      <div>
+        <h2 class="mtitle" id="exInfoName">Exercise Guide</h2>
+        <div style="font-size:.75rem;color:var(--t3)">How to do it & what it works</div>
+      </div>
+      <button class="mclose" onclick="closeOv('ovExInfo')">×</button>
+    </div>
+    <div id="exInfoBody" style="max-height:60vh;overflow-y:auto;padding-right:.25rem"></div>
+    <div class="mfoot">
+      <button class="btn btn-s" onclick="closeOv('ovExInfo')">Got it!</button>
     </div>
   </div>
 </div>
@@ -1645,47 +1737,161 @@ canvas{display:block;width:100%}
    EXERCISE DATABASE
 ═══════════════════════════════════════════════════════════════ */
 const EX_BASE = [
-  {id:'e01',name:'Push-Up',muscle:'chest',equip:'bodyweight',diff:'beginner',desc:'Classic compound push. Core tight, lower chest to floor.'},
-  {id:'e02',name:'Bench Press',muscle:'chest',equip:'barbell',diff:'intermediate',desc:'Compound chest press on flat bench. Feet flat, slight arch.'},
-  {id:'e03',name:'Incline Dumbbell Press',muscle:'chest',equip:'dumbbell',diff:'intermediate',desc:'Press on incline bench to target upper chest.'},
-  {id:'e04',name:'Chest Fly',muscle:'chest',equip:'dumbbell',diff:'intermediate',desc:'Isolation for pecs. Keep slight bend in elbows throughout.'},
-  {id:'e05',name:'Dips',muscle:'chest',equip:'bodyweight',diff:'intermediate',desc:'Lean forward on bars to emphasize chest over triceps.'},
-  {id:'e06',name:'Pull-Up',muscle:'back',equip:'bodyweight',diff:'advanced',desc:'Hang from bar, pull chest up. Overhand grip targets lats.'},
-  {id:'e07',name:'Bent-Over Row',muscle:'back',equip:'barbell',diff:'intermediate',desc:'Hinge at hips, row bar to lower chest. Back flat.'},
-  {id:'e08',name:'Dumbbell Row',muscle:'back',equip:'dumbbell',diff:'beginner',desc:'Single-arm row with knee on bench. Pull elbow up.'},
-  {id:'e09',name:'Lat Pulldown',muscle:'back',equip:'cable',diff:'beginner',desc:'Pull bar to upper chest while seated.'},
-  {id:'e10',name:'Deadlift',muscle:'back',equip:'barbell',diff:'advanced',desc:'Hip hinge to lift bar from floor. Full posterior chain.'},
-  {id:'e11',name:'Overhead Press',muscle:'shoulders',equip:'barbell',diff:'advanced',desc:'Press bar from shoulders overhead. Core braced.'},
-  {id:'e12',name:'Lateral Raise',muscle:'shoulders',equip:'dumbbell',diff:'beginner',desc:'Raise dumbbells to shoulder height, arms wide.'},
-  {id:'e13',name:'Front Raise',muscle:'shoulders',equip:'dumbbell',diff:'beginner',desc:'Raise dumbbells forward to shoulder height.'},
-  {id:'e14',name:'Arnold Press',muscle:'shoulders',equip:'dumbbell',diff:'intermediate',desc:'Rotating dumbbell press targeting all delt heads.'},
-  {id:'e15',name:'Face Pull',muscle:'shoulders',equip:'cable',diff:'beginner',desc:'Pull rope to face. Great for rear delts and rotator cuff.'},
-  {id:'e16',name:'Bicep Curl',muscle:'arms',equip:'dumbbell',diff:'beginner',desc:'Classic curl. Supinate wrist at top for full contraction.'},
-  {id:'e17',name:'Hammer Curl',muscle:'arms',equip:'dumbbell',diff:'beginner',desc:'Neutral grip curl. Targets brachialis and forearms.'},
-  {id:'e18',name:'Tricep Dips',muscle:'arms',equip:'bodyweight',diff:'beginner',desc:'Bench or parallel bars. Elbows close to body.'},
-  {id:'e19',name:'Skull Crusher',muscle:'arms',equip:'barbell',diff:'intermediate',desc:'Lower bar to forehead while lying. Isolates triceps.'},
-  {id:'e20',name:'Chin-Up',muscle:'arms',equip:'bodyweight',diff:'advanced',desc:'Underhand grip pull-up. More bicep involvement.'},
-  {id:'e21',name:'Plank',muscle:'core',equip:'bodyweight',diff:'beginner',desc:'Hold rigid position on forearms. Hips level.'},
-  {id:'e22',name:'Crunch',muscle:'core',equip:'bodyweight',diff:'beginner',desc:'Squeeze abs at top, do not pull neck.'},
-  {id:'e23',name:'Russian Twist',muscle:'core',equip:'bodyweight',diff:'intermediate',desc:'Seated twist with feet off floor.'},
-  {id:'e24',name:'Hanging Leg Raise',muscle:'core',equip:'bodyweight',diff:'advanced',desc:'Hang from bar, raise legs to 90°.'},
-  {id:'e25',name:'Ab Wheel Rollout',muscle:'core',equip:'other',diff:'advanced',desc:'Roll out from knees. Extreme core strength.'},
-  {id:'e38',name:'Mountain Climber',muscle:'core',equip:'bodyweight',diff:'intermediate',desc:'Running motion in plank position.'},
-  {id:'e26',name:'Barbell Squat',muscle:'legs',equip:'barbell',diff:'advanced',desc:'Bar on traps, squat to parallel or below.'},
-  {id:'e27',name:'Goblet Squat',muscle:'legs',equip:'kettlebell',diff:'beginner',desc:'Hold kettlebell at chest, squat deeply.'},
-  {id:'e28',name:'Leg Press',muscle:'legs',equip:'machine',diff:'beginner',desc:'Press platform away seated.'},
-  {id:'e29',name:'Romanian Deadlift',muscle:'legs',equip:'dumbbell',diff:'intermediate',desc:'Hip hinge, legs nearly straight. Great hamstring stretch.'},
-  {id:'e30',name:'Bulgarian Split Squat',muscle:'legs',equip:'dumbbell',diff:'advanced',desc:'Rear foot elevated single-leg squat.'},
-  {id:'e37',name:'Box Jump',muscle:'legs',equip:'bodyweight',diff:'intermediate',desc:'Explosive jump onto box. Power development.'},
-  {id:'e39',name:'Walking Lunge',muscle:'legs',equip:'dumbbell',diff:'beginner',desc:'Alternate forward lunges for quads and balance.'},
-  {id:'e31',name:'Hip Thrust',muscle:'glutes',equip:'barbell',diff:'intermediate',desc:'Drive hips up with bar on hips. Best glute builder.'},
-  {id:'e32',name:'Glute Bridge',muscle:'glutes',equip:'bodyweight',diff:'beginner',desc:'Bridge hips from floor. Squeeze at top.'},
-  {id:'e33',name:'Cable Kickback',muscle:'glutes',equip:'cable',diff:'beginner',desc:'Kick leg back with ankle strap. Isolates glutes.'},
-  {id:'e34',name:'Burpee',muscle:'full-body',equip:'bodyweight',diff:'advanced',desc:'Drop to floor, push up, jump. High-intensity conditioning.'},
-  {id:'e35',name:'Kettlebell Swing',muscle:'full-body',equip:'kettlebell',diff:'intermediate',desc:'Hip hinge power movement. Posterior chain and cardio.'},
-  {id:'e36',name:'Jump Rope',muscle:'cardio',equip:'other',diff:'beginner',desc:'Excellent cardiovascular conditioning and coordination.'},
-  {id:'e40',name:'Band Pull-Apart',muscle:'shoulders',equip:'band',diff:'beginner',desc:'Pull band apart at chest height. Rear delt and posture.'},
+  // ──────────── CHEST ────────────
+  {id:'e01', name:'Push-Up',                  muscle:'chest',     equip:'bodyweight', diff:'beginner',     desc:'The classic bodyweight chest exercise. Lower your chest to the floor and push back up. Keep your core tight and body in a straight line the whole time.', howto:'1) Place hands just outside shoulder-width on the floor. 2) Keep body in a straight line from head to heels — don\'t let hips sag or rise. 3) Lower chest toward the floor (aim for 1 inch off). 4) Push back up fully. Modify on knees if needed.', targets:'Chest, triceps, shoulders, core. The ultimate no-equipment upper-body move.'},
+  {id:'e01b',name:'Wide Push-Up',             muscle:'chest',     equip:'bodyweight', diff:'beginner',     desc:'Push-up with hands placed wider than normal to emphasize the outer chest muscles.', howto:'1) Set hands wider than shoulder-width. 2) Same form as a regular push-up — body straight, core tight. 3) Elbows flare out more to the sides as you lower. 4) Push back up. The wider stance shifts more work to the outer pecs.', targets:'Outer chest (pecs), shoulders, triceps.'},
+  {id:'e01c',name:'Diamond Push-Up',          muscle:'chest',     equip:'bodyweight', diff:'intermediate', desc:'Hands form a diamond/triangle shape directly under your chest. Works the inner chest and triceps more than a regular push-up.', howto:'1) Place hands together under your chest, thumbs and forefingers forming a diamond. 2) Keep elbows tight to your sides as you lower. 3) Lower chest toward your hands. 4) Push back up. Harder than it looks — start with just a few reps.', targets:'Inner chest, triceps primarily.'},
+  {id:'e01d',name:'Decline Push-Up',          muscle:'chest',     equip:'bodyweight', diff:'intermediate', desc:'Feet elevated on a chair or box, hands on the floor. The angle shifts emphasis to the upper chest area.', howto:'1) Place feet on a chair or step (18–24 inches high). 2) Hands shoulder-width on floor, body angled downward. 3) Lower chest toward floor. 4) Push back up. Higher feet = more upper chest involvement.', targets:'Upper chest, front shoulders, triceps.'},
+  {id:'e01e',name:'Archer Push-Up',           muscle:'chest',     equip:'bodyweight', diff:'advanced',     desc:'A side-loaded push-up where you shift your weight to one arm as you lower, training each side more independently. Demanding on strength and stability.', howto:'1) Wide hand position on floor. 2) As you lower, shift your weight to your RIGHT arm, letting the LEFT arm straighten out to the side (like an archer pulling a bow). 3) Push back up. 4) Alternate sides each rep. Start slow — this is hard.', targets:'Chest (unilateral), triceps, core stability.'},
+  {id:'e02', name:'Bench Press',              muscle:'chest',     equip:'barbell',    diff:'intermediate', desc:'The classic barbell chest press on a flat bench. One of the best compound chest exercises for building size and strength.', howto:'1) Lie on the bench, feet flat on floor. 2) Grip bar slightly wider than shoulder-width. 3) Unrack and lower bar to mid-chest with control. 4) Press bar straight up until arms lock out. Keep shoulder blades retracted (pinched) throughout.', targets:'Chest, front shoulders, triceps. The king of upper-body pressing.'},
+  {id:'e02a',name:'Incline Bench Press',      muscle:'chest',     equip:'barbell',    diff:'intermediate', desc:'Barbell press on an inclined bench (30–45°) to target the upper portion of the chest.', howto:'1) Set bench to 30–45 degree incline. 2) Grip bar wider than shoulder-width. 3) Lower bar to upper chest/collarbone area. 4) Press back up. The angle shifts work from mid to upper chest.', targets:'Upper chest primarily, front shoulders, triceps.'},
+  {id:'e02b',name:'Dumbbell Bench Press',     muscle:'chest',     equip:'dumbbell',   diff:'intermediate', desc:'Flat bench press with dumbbells. Allows a greater range of motion than a barbell and helps correct any strength imbalance between sides.', howto:'1) Lie flat on bench, dumbbell in each hand at chest level. 2) Palms face forward (toward feet). 3) Press both dumbbells up until arms are extended. 4) Lower slowly with control. Let elbows drop slightly below the bench level for full stretch.', targets:'Chest, front shoulders, triceps.'},
+  {id:'e06', name:'Pull-Up',                  muscle:'back',      equip:'pullup_bar', diff:'advanced',     desc:'Hang from a bar with an overhand grip and pull your chest up to it. One of the best back exercises you can do — builds wide, strong lats. Tough but worth mastering.', howto:'1) Hang from bar with overhand grip, hands slightly wider than shoulders. 2) Engage core and keep body from swinging. 3) Pull elbows down and back to bring chest toward bar. 4) Slowly lower all the way down. Beginner tip: use a resistance band looped over the bar under your knees for assistance.', targets:'Lats (back width), biceps, rear shoulders, core.'},
+  {id:'e07', name:'Bent-Over Row',            muscle:'back',      equip:'barbell',    diff:'intermediate', desc:'Hinge at the hips, keep back flat, and row a barbell up to your lower chest. One of the most effective total-back builders.', howto:'1) Stand with feet shoulder-width, slight knee bend. 2) Hinge forward at hips until torso is roughly 45° — keep back FLAT (not rounded). 3) Grip bar just outside legs. 4) Pull bar to your lower ribs, squeezing shoulder blades together. 5) Lower slowly.', targets:'Middle and upper back, lats, rear shoulders, biceps.'},
+  {id:'e08', name:'Dumbbell Row',             muscle:'back',      equip:'dumbbell',   diff:'beginner',     desc:'Single-arm row with one knee on a bench for support. Great for building back thickness and correcting side-to-side imbalances.', howto:'1) Place left knee and left hand on a bench, right foot on floor. 2) Hold dumbbell in right hand, arm hanging straight. 3) Pull dumbbell up toward your hip, squeezing your back — elbow goes up and back. 4) Lower slowly. Switch sides.', targets:'Lats, mid-back, rear shoulder, biceps.'},
+  {id:'e10', name:'Deadlift',                 muscle:'back',      equip:'barbell',    diff:'advanced',     desc:'Pull a barbell from the floor to standing. The king of compound lifts — works nearly every muscle in your body, with a focus on the whole back and legs. Requires learning proper form before adding heavy weight.', howto:'1) Stand with feet hip-width, bar over mid-foot. 2) Hinge at hips and grip bar just outside legs. 3) Drop hips, chest up, back flat. 4) Push floor away (legs) while keeping bar close to body. 5) Stand fully upright. 6) Hinge back down to lower. Never round your lower back.', targets:'Entire posterior chain: lower back, hamstrings, glutes, upper back, traps.'},
+  {id:'e11', name:'Overhead Press',           muscle:'shoulders', equip:'barbell',    diff:'advanced',     desc:'Press a barbell from shoulder height straight overhead. The gold standard for building strong, big shoulders.', howto:'1) Stand with feet shoulder-width, bar resting on upper chest/front delts. 2) Grip bar just outside shoulders. 3) Brace core. 4) Press bar straight overhead until arms lock out. 5) Lower controlled back to start. Keep your torso upright — don\'t lean back excessively.', targets:'Front and side deltoids (shoulders), triceps, upper traps, core stability.'},
+  {id:'e16', name:'Dumbbell Bicep Curl',      muscle:'arms',      equip:'dumbbell',   diff:'beginner',     desc:'The classic bicep exercise. Curl a dumbbell from straight arm to shoulder height. Simple and effective for building arm size.', howto:'1) Stand holding a dumbbell in each hand, arms at sides, palms facing forward. 2) Keep upper arms still — only your forearms move. 3) Curl dumbbells up toward shoulders. 4) Squeeze at the top. 5) Lower slowly with control. Avoid swinging — if you are, the weight is too heavy.', targets:'Biceps, forearms.'},
+  {id:'e18', name:'Tricep Dips',              muscle:'arms',      equip:'bodyweight', diff:'beginner',     desc:'Place hands on a sturdy chair or bench behind you and dip your body down by bending your elbows. Works the triceps well with no gym equipment required.', howto:'1) Sit on the edge of a chair, hands gripping the edge beside your hips. 2) Slide your backside off the edge, supporting yourself with your arms. 3) Lower yourself by bending elbows to ~90°. 4) Push back up. Keep your back close to the chair throughout.', targets:'Triceps primarily, some front shoulder.'},
+  {id:'e21', name:'Plank',                    muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'Hold a push-up position on your forearms and toes. One of the best core stability exercises. It works without any movement — the challenge is just holding the position.', howto:'1) Place forearms on floor, elbows under shoulders. 2) Extend legs behind you, resting on toes. 3) Your body should form a straight line — don\'t let hips sag or stick up. 4) Breathe steadily. Hold for the target time. Modify: drop to knees for an easier version.', targets:'Core (all abs), lower back, shoulders, glutes. A complete stability exercise.'},
+  {id:'e03', name:'Incline Dumbbell Press',   muscle:'chest',     equip:'dumbbell',   diff:'intermediate', desc:'Press on incline bench — upper chest focus.'},
+  {id:'e04', name:'Dumbbell Chest Fly',       muscle:'chest',     equip:'dumbbell',   diff:'intermediate', desc:'Isolation for pecs. Slight elbow bend throughout.'},
+  {id:'e05', name:'Dips',                     muscle:'chest',     equip:'bodyweight', diff:'intermediate', desc:'Lean forward on parallel bars to emphasise chest.'},
+  {id:'e04a',name:'Cable Chest Fly',          muscle:'chest',     equip:'cable',      diff:'intermediate', desc:'Standing cable crossover. Constant tension.'},
+  {id:'e04b',name:'Band Push-Up',             muscle:'chest',     equip:'band',       diff:'intermediate', desc:'Loop resistance band across back for added resistance.'},
+
+  // ──────────── BACK ────────────
+  {id:'e06', name:'Pull-Up',                  muscle:'back',      equip:'pullup_bar', diff:'advanced',     desc:'Overhand grip pull-up. Full lat width builder.'},
+  {id:'e06a',name:'Chin-Up',                  muscle:'back',      equip:'pullup_bar', diff:'intermediate', desc:'Underhand grip — more bicep, still great for lats.'},
+  {id:'e06b',name:'Inverted Row',             muscle:'back',      equip:'bodyweight', diff:'beginner',     desc:'Lie under a table or low bar and pull chest up. Zero-equipment back work.'},
+  {id:'e06c',name:'Superman Hold',            muscle:'back',      equip:'bodyweight', diff:'beginner',     desc:'Lie face-down, lift arms and legs. Lower back endurance.'},
+  {id:'e06d',name:'Good Morning',             muscle:'back',      equip:'bodyweight', diff:'beginner',     desc:'Hip hinge forward with hands behind head. Stretches and strengthens lower back.'},
+  {id:'e07', name:'Bent-Over Row',            muscle:'back',      equip:'barbell',    diff:'intermediate', desc:'Row bar to lower chest. Back flat, hips hinged.'},
+  {id:'e07a',name:'Pendlay Row',              muscle:'back',      equip:'barbell',    diff:'advanced',     desc:'Bar starts on floor each rep. Explosive pulling strength.'},
+  {id:'e08', name:'Dumbbell Row',             muscle:'back',      equip:'dumbbell',   diff:'beginner',     desc:'Single-arm row with knee on bench. Squeeze at top.'},
+  {id:'e08a',name:'Dumbbell Deadlift',        muscle:'back',      equip:'dumbbell',   diff:'intermediate', desc:'Romanian-style deadlift with dumbbells.'},
+  {id:'e09', name:'Lat Pulldown',             muscle:'back',      equip:'cable',      diff:'beginner',     desc:'Pull bar to upper chest. Great lat builder.'},
+  {id:'e09a',name:'Seated Cable Row',         muscle:'back',      equip:'cable',      diff:'beginner',     desc:'Pull handle to abdomen. Mid-back and lats.'},
+  {id:'e10', name:'Deadlift',                 muscle:'back',      equip:'barbell',    diff:'advanced',     desc:'Pull bar from floor. Full posterior chain.'},
+  {id:'e10a',name:'Machine Row',              muscle:'back',      equip:'machine',    diff:'beginner',     desc:'Chest-supported machine row. Safe for all levels.'},
+  {id:'e10b',name:'Band Resistance Row',      muscle:'back',      equip:'band',       diff:'beginner',     desc:'Anchor band at waist height and row to torso.'},
+
+  // ──────────── SHOULDERS ────────────
+  {id:'e11', name:'Overhead Press',           muscle:'shoulders', equip:'barbell',    diff:'advanced',     desc:'Press bar overhead. Compound shoulder strength.'},
+  {id:'e11a',name:'Dumbbell Shoulder Press',  muscle:'shoulders', equip:'dumbbell',   diff:'intermediate', desc:'Press dumbbells overhead. Seated or standing.'},
+  {id:'e11b',name:'Pike Push-Up',             muscle:'shoulders', equip:'bodyweight', diff:'intermediate', desc:'Hips high in inverted V, lower head to floor. Bodyweight overhead press.'},
+  {id:'e11c',name:'Handstand Push-Up',        muscle:'shoulders', equip:'bodyweight', diff:'advanced',     desc:'Kick to handstand against wall, lower head to floor.'},
+  {id:'e11d',name:'Band Shoulder Press',      muscle:'shoulders', equip:'band',       diff:'beginner',     desc:'Stand on band and press overhead. Home-friendly.'},
+  {id:'e12', name:'Lateral Raise',            muscle:'shoulders', equip:'dumbbell',   diff:'beginner',     desc:'Raise dumbbells to shoulder height. Lateral deltoids.'},
+  {id:'e12a',name:'Band Lateral Raise',       muscle:'shoulders', equip:'band',       diff:'beginner',     desc:'Step on band, raise to sides. Same motion as dumbbell.'},
+  {id:'e13', name:'Front Raise',              muscle:'shoulders', equip:'dumbbell',   diff:'beginner',     desc:'Raise dumbbells forward to shoulder height.'},
+  {id:'e14', name:'Arnold Press',             muscle:'shoulders', equip:'dumbbell',   diff:'intermediate', desc:'Rotating dumbbell press hitting all three delt heads.'},
+  {id:'e15', name:'Face Pull',                muscle:'shoulders', equip:'cable',      diff:'beginner',     desc:'Pull rope to face. Rear delts and rotator cuff.'},
+  {id:'e15a',name:'Rear Delt Fly',            muscle:'shoulders', equip:'dumbbell',   diff:'beginner',     desc:'Bent-over raise. Isolates rear deltoids.'},
+  {id:'e40', name:'Band Pull-Apart',          muscle:'shoulders', equip:'band',       diff:'beginner',     desc:'Pull band apart at chest height. Rear delt and posture.'},
+
+  // ──────────── ARMS ────────────
+  {id:'e16', name:'Dumbbell Bicep Curl',      muscle:'arms',      equip:'dumbbell',   diff:'beginner',     desc:'Classic curl. Supinate wrist at top.'},
+  {id:'e16a',name:'Hammer Curl',              muscle:'arms',      equip:'dumbbell',   diff:'beginner',     desc:'Neutral grip curl. Brachialis and forearms.'},
+  {id:'e16b',name:'Barbell Curl',             muscle:'arms',      equip:'barbell',    diff:'intermediate', desc:'Heavy barbell bicep curl for max load.'},
+  {id:'e16c',name:'Cable Curl',               muscle:'arms',      equip:'cable',      diff:'beginner',     desc:'Constant tension bicep curl.'},
+  {id:'e16d',name:'Band Bicep Curl',          muscle:'arms',      equip:'band',       diff:'beginner',     desc:'Stand on band and curl. Great home bicep work.'},
+  {id:'e18', name:'Tricep Dips',              muscle:'arms',      equip:'bodyweight', diff:'beginner',     desc:'Use a sturdy chair or bench. Elbows close.'},
+  {id:'e18a',name:'Close-Grip Push-Up',       muscle:'arms',      equip:'bodyweight', diff:'beginner',     desc:'Hands close, elbows tucked in. Targets triceps.'},
+  {id:'e19', name:'Skull Crusher',            muscle:'arms',      equip:'barbell',    diff:'intermediate', desc:'Lower bar to forehead while lying. Tricep isolation.'},
+  {id:'e19a',name:'Overhead Tricep Extension',muscle:'arms',      equip:'dumbbell',   diff:'beginner',     desc:'Extend single dumbbell overhead. Great tricep stretch.'},
+  {id:'e19b',name:'Tricep Pushdown',          muscle:'arms',      equip:'cable',      diff:'beginner',     desc:'Push cable down until arms straight. Classic tricep.'},
+  {id:'e19c',name:'Band Tricep Extension',    muscle:'arms',      equip:'band',       diff:'beginner',     desc:'Anchor band high, push down. Tricep work anywhere.'},
+  {id:'e20', name:'Chin-Up (Bicep focus)',    muscle:'arms',      equip:'pullup_bar', diff:'advanced',     desc:'Underhand grip, slow eccentric. Maximum bicep load.'},
+
+  // ──────────── LEGS ────────────
+  {id:'e26', name:'Barbell Back Squat',       muscle:'legs',      equip:'barbell',    diff:'advanced',     desc:'Bar on traps, squat to parallel. King of leg exercises.'},
+  {id:'e26a',name:'Barbell Front Squat',      muscle:'legs',      equip:'barbell',    diff:'advanced',     desc:'Bar across front delts. More quad-dominant.'},
+  {id:'e27', name:'Goblet Squat',             muscle:'legs',      equip:'kettlebell', diff:'beginner',     desc:'Hold kettlebell at chest, squat deeply.'},
+  {id:'e27a',name:'Dumbbell Goblet Squat',    muscle:'legs',      equip:'dumbbell',   diff:'beginner',     desc:'Dumbbell held at chest while squatting. No barbell needed.'},
+  {id:'e27b',name:'Bodyweight Squat',         muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Squat to parallel with no weight. Perfect form builder.'},
+  {id:'e27c',name:'Sumo Squat',               muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Wide stance squat. Inner thighs and glutes.'},
+  {id:'e28', name:'Leg Press',                muscle:'legs',      equip:'machine',    diff:'beginner',     desc:'Press platform away seated.'},
+  {id:'e28a',name:'Leg Extension',            muscle:'legs',      equip:'machine',    diff:'beginner',     desc:'Quad isolation on machine.'},
+  {id:'e28b',name:'Seated Leg Curl',          muscle:'legs',      equip:'machine',    diff:'beginner',     desc:'Hamstring isolation on machine.'},
+  {id:'e29', name:'Romanian Deadlift',        muscle:'legs',      equip:'dumbbell',   diff:'intermediate', desc:'Hip hinge, legs nearly straight. Hamstrings and glutes.'},
+  {id:'e29a',name:'Barbell Romanian Deadlift',muscle:'legs',      equip:'barbell',    diff:'intermediate', desc:'Heavier hamstring hip hinge.'},
+  {id:'e30', name:'Bulgarian Split Squat',    muscle:'legs',      equip:'dumbbell',   diff:'advanced',     desc:'Rear foot elevated. Brutal single-leg quad builder.'},
+  {id:'e30a',name:'Bodyweight Split Squat',   muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Rear foot on chair. Single-leg strength without weights.'},
+  {id:'e30b',name:'Reverse Lunge',            muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Step backward into lunge. Easier on knees.'},
+  {id:'e30c',name:'Forward Lunge',            muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Step forward and lower knee toward floor.'},
+  {id:'e30d',name:'Dumbbell Lunge',           muscle:'legs',      equip:'dumbbell',   diff:'intermediate', desc:'Hold dumbbells at sides while lunging.'},
+  {id:'e39', name:'Walking Lunge',            muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Alternating forward lunges across the floor.'},
+  {id:'e39a',name:'Squat Jump',               muscle:'legs',      equip:'bodyweight', diff:'intermediate', desc:'Explosive jump from squat position. Power without equipment.'},
+  {id:'e39b',name:'Wall Sit',                 muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Hold squat against wall for time. Quad endurance.'},
+  {id:'e39c',name:'Step-Up',                  muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Step onto a sturdy chair or stair. Unilateral leg strength.'},
+  {id:'e39d',name:'Calf Raise',               muscle:'legs',      equip:'bodyweight', diff:'beginner',     desc:'Rise on toes slowly. Stand on a step for full range.'},
+  {id:'e37', name:'Box Jump',                 muscle:'legs',      equip:'box',        diff:'intermediate', desc:'Explosive jump onto plyo box. Requires actual box.'},
+  {id:'e39e',name:'Band Squat',               muscle:'legs',      equip:'band',       diff:'beginner',     desc:'Stand on band and squat. Adds resistance throughout.'},
+  {id:'e39f',name:'Dumbbell Step-Up',         muscle:'legs',      equip:'dumbbell',   diff:'intermediate', desc:'Hold dumbbells while stepping onto bench or box.'},
+  {id:'e39g',name:'Nordic Curl',              muscle:'legs',      equip:'bodyweight', diff:'advanced',     desc:'Anchor feet, lower body forward under control. Extreme hamstring strength.'},
+
+  // ──────────── GLUTES ────────────
+  {id:'e31', name:'Barbell Hip Thrust',       muscle:'glutes',    equip:'barbell',    diff:'intermediate', desc:'Bar on hips, drive up from bench. Best glute builder.'},
+  {id:'e31a',name:'Dumbbell Hip Thrust',      muscle:'glutes',    equip:'dumbbell',   diff:'beginner',     desc:'Hip thrust with dumbbell on hips. Home-friendly.'},
+  {id:'e32', name:'Glute Bridge',             muscle:'glutes',    equip:'bodyweight', diff:'beginner',     desc:'Bridge hips from floor. Squeeze hard at top.'},
+  {id:'e32a',name:'Single-Leg Glute Bridge',  muscle:'glutes',    equip:'bodyweight', diff:'intermediate', desc:'One-leg bridge for unilateral glute isolation.'},
+  {id:'e32b',name:'Donkey Kick',              muscle:'glutes',    equip:'bodyweight', diff:'beginner',     desc:'All fours — kick leg back and up. Direct glute squeeze.'},
+  {id:'e32c',name:'Fire Hydrant',             muscle:'glutes',    equip:'bodyweight', diff:'beginner',     desc:'Lift bent leg outward from all fours. Glute medius.'},
+  {id:'e32d',name:'Banded Hip Abduction',     muscle:'glutes',    equip:'band',       diff:'beginner',     desc:'Band above knees, drive outward. Glute medius isolation.'},
+  {id:'e33', name:'Cable Kickback',           muscle:'glutes',    equip:'cable',      diff:'beginner',     desc:'Ankle strap kick-back. Clean glute isolation.'},
+  {id:'e33a',name:'Romanian Deadlift (Glute)',muscle:'glutes',    equip:'dumbbell',   diff:'intermediate', desc:'Slow hip hinge. Pause at bottom for max stretch.'},
+  {id:'e33b',name:'Sumo Deadlift',            muscle:'glutes',    equip:'barbell',    diff:'intermediate', desc:'Wide stance deadlift. Major glute and inner thigh.'},
+
+  // ──────────── CORE ────────────
+  {id:'e21', name:'Plank',                    muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'Forearms on floor, rigid body. Hold for time.'},
+  {id:'e21a',name:'Side Plank',               muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'One forearm and foot. Lateral core and obliques.'},
+  {id:'e21b',name:'Hollow Body Hold',         muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Press lower back to floor, arms and legs raised.'},
+  {id:'e22', name:'Crunch',                   muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'Squeeze abs, do not pull neck. Slow and controlled.'},
+  {id:'e22a',name:'Bicycle Crunch',           muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'Alternating elbow to knee. Obliques and rectus.'},
+  {id:'e22b',name:'Reverse Crunch',           muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Bring knees to chest lifting hips. Lower abs.'},
+  {id:'e22c',name:'V-Up',                     muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Raise legs and torso simultaneously, touch toes.'},
+  {id:'e23', name:'Russian Twist',            muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Seated twist with feet off floor.'},
+  {id:'e24', name:'Hanging Leg Raise',        muscle:'core',      equip:'pullup_bar', diff:'advanced',     desc:'Hang from bar, raise legs to 90°.'},
+  {id:'e24a',name:'Lying Leg Raise',          muscle:'core',      equip:'bodyweight', diff:'beginner',     desc:'Lie on back, raise straight legs to 90°. Lower abs.'},
+  {id:'e25', name:'Ab Wheel Rollout',         muscle:'core',      equip:'other',      diff:'advanced',     desc:'Roll out from knees. Extreme anterior core demand.'},
+  {id:'e38', name:'Mountain Climber',         muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Running motion in plank. Core and conditioning.'},
+  {id:'e38a',name:'Dead Bug',                 muscle:'core',      equip:'bodyweight', diff:'intermediate', desc:'Opposite arm and leg extension lying down. Anti-rotation.'},
+  {id:'e38b',name:'Pallof Press',             muscle:'core',      equip:'cable',      diff:'intermediate', desc:'Press cable out from chest. Anti-rotation stability.'},
+
+  // ──────────── FULL BODY ────────────
+  {id:'e34', name:'Burpee',                   muscle:'full-body', equip:'bodyweight', diff:'advanced',     desc:'Drop, push-up, jump. Maximum full-body effort.'},
+  {id:'e34a',name:'Bear Crawl',               muscle:'full-body', equip:'bodyweight', diff:'intermediate', desc:'Move forward on hands and feet, knees just off ground.'},
+  {id:'e34b',name:'Thrusters',                muscle:'full-body', equip:'dumbbell',   diff:'intermediate', desc:'Front squat into overhead press. Efficient total-body.'},
+  {id:'e35', name:'Kettlebell Swing',         muscle:'full-body', equip:'kettlebell', diff:'intermediate', desc:'Hip hinge power movement. Posterior chain and conditioning.'},
+  {id:'e35a',name:'Turkish Get-Up',           muscle:'full-body', equip:'kettlebell', diff:'advanced',     desc:'Rise from floor to standing with weight overhead.'},
+  {id:'e35b',name:'Clean and Press',          muscle:'full-body', equip:'dumbbell',   diff:'advanced',     desc:'Pull dumbbell from floor to shoulder then press overhead.'},
+
+  // ──────────── CARDIO ────────────
+  // All bodyweight cardio — no special gear assumed
+  {id:'c01', name:'High Knees',               muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Stand tall and jog in place, lifting each knee up to hip height. Think of it like running in slow motion with exaggerated knee lifts. Great for raising your heart rate quickly with zero equipment.', howto:'1) Stand feet hip-width apart. 2) Drive right knee up toward chest, quickly switch to left. 3) Pump opposite arms as you go. 4) Stay light on your feet — start slow and speed up as you get comfortable.', targets:'Heart & lungs, hip flexors, calves. Burns calories fast.'},
+  {id:'c02', name:'Jumping Jacks',            muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Stand with feet together and arms at sides. Jump feet out wide while raising both arms overhead, then jump back to start. One of the most familiar full-body cardio moves — you probably did these in gym class!', howto:'1) Start standing, feet together, arms down. 2) Jump feet out to shoulder-width and raise arms overhead to a Y shape. 3) Jump feet back together and lower arms. 4) Keep a smooth bouncy rhythm. Modify: step out instead of jumping.', targets:'Heart rate, shoulders, inner thighs, calves. Great warm-up.'},
+  {id:'c03', name:'Butt Kicks',               muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Jog in place but instead of lifting your knees forward, kick your heels back toward your backside. Focus on getting each heel close to your glute. Fast and easy — great for warming up hamstrings while getting your heart going.', howto:'1) Stand in place feet hip-width. 2) Jog in place, kicking your heel up toward your glute with each step. 3) Swing arms naturally. 4) Try to touch heel to glute each rep. Start slow, then speed up.', targets:'Heart rate, hamstrings, glutes, calves.'},
+  {id:'c04', name:'Side-to-Side Shuffle',     muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Shuffle your feet quickly sideways — like a basketball player moving on defense. Stay low with bent knees. Very easy to learn, gets your heart rate up, and works your inner and outer thighs. No jumping required.', howto:'1) Bend knees slightly into an athletic crouch. 2) Push off your right foot and shuffle 3–4 steps left, feet close to the floor. 3) Shuffle back right. 4) Swing arms gently for balance. Keep moving back and forth for the full time.', targets:'Heart rate, inner/outer thighs, glutes, coordination.'},
+  {id:'c05', name:'Shadow Boxing',            muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Throw punches at the air while moving your feet — no experience needed. Alternate jabs (straight punches) and hooks (wide swings) while shifting your weight side to side. Fun, burns a surprising amount of calories, and relieves stress.', howto:'1) Stand feet shoulder-width, hands raised near chin. 2) Throw a straight punch with one hand, then the other, rotating torso slightly. 3) Add hooks by swinging arm in an arc from the side. 4) Move your feet — shuffle, pivot, bounce. Keep going for the full interval.', targets:'Heart rate, shoulders, core, coordination.'},
+  {id:'c06', name:'Fast Mountain Climbers',   muscle:'cardio',    equip:'bodyweight', diff:'intermediate', desc:'Get into a push-up position and rapidly drive one knee toward your chest, then switch — like you\'re running horizontally on the floor. The faster you go, the harder the cardio. Tough but very effective with no equipment at all.', howto:'1) Start in push-up position — hands under shoulders, body in a straight line. 2) Drive right knee toward chest, then quickly switch as right leg goes back. 3) Go as fast as you can while keeping hips level. 4) Breathe steadily. Start slow and build speed.', targets:'Heart rate, core, shoulders, hip flexors.'},
+  {id:'c07', name:'Jump Squats',              muscle:'cardio',    equip:'bodyweight', diff:'intermediate', desc:'Do a regular squat then explode upward into a jump at the top. Land softly back into a squat and go again. Your legs and lungs will both feel it. If jumping is too much, do fast squats without leaving the ground.', howto:'1) Feet shoulder-width apart. 2) Lower into a squat — knees over toes, chest up. 3) Explode upward off the ground. 4) Land softly with bent knees to absorb impact. 5) Flow straight into the next squat. Modify: fast squats without jumping.', targets:'Quads, glutes, heart rate. Best lower-body cardio move.'},
+  {id:'c08', name:'Burpees',                  muscle:'cardio',    equip:'bodyweight', diff:'intermediate', desc:'The classic total-body move: drop hands to the floor, kick feet back to push-up position, do a push-up (optional), bring feet back in, stand up and jump. Hard but incredibly efficient — burns a ton of calories fast. Modify by stepping instead of jumping.', howto:'1) Stand up. 2) Drop hands to floor and jump (or step) feet back to push-up position. 3) Optional push-up. 4) Jump (or step) feet back toward hands. 5) Stand up and jump, hands overhead. 6) Repeat at your own pace — form beats speed.', targets:'Chest, arms, core, legs, glutes. Huge calorie burn.'},
+  {id:'c09', name:'Skater Hops',              muscle:'cardio',    equip:'bodyweight', diff:'intermediate', desc:'Hop sideways from one foot to the other in a smooth skating motion. Each time you land, briefly balance on one foot then push off to the other side. Great for coordination, balance, and cardio together.', howto:'1) Balance on right foot with slight knee bend. 2) Push off and hop left, landing on left foot. Swing right arm across body for balance. 3) Hold briefly, then hop back right. 4) Land quietly and controlled. Reach toward landing foot for extra challenge.', targets:'Glutes, inner thighs, calves, balance, heart rate.'},
+  {id:'c10', name:'Run in Place (Sprints)',   muscle:'cardio',    equip:'bodyweight', diff:'intermediate', desc:'Run as fast as you can in place for 20–30 seconds — all-out effort — then slow to a march for rest. Repeat. This is interval training: go hard for a bit, rest, go hard again. No treadmill needed. A hallway or any open space works.', howto:'1) Run in place, pumping arms and lifting knees high. 2) Go as fast as you can for 20–30 seconds. 3) Slow to a march in place for 30–45 seconds to recover. 4) Repeat 4–8 times. The harder you go during "on" periods, the better the result.', targets:'Heart & lungs, legs, calorie burn. Great fitness booster.'},
+  {id:'c11', name:'Stair Climbing',           muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Walk or jog up and down a flight of stairs repeatedly. Simple, low-tech, and surprisingly effective cardio. Your legs and heart will work hard. No stairs? Step up and down on one stair or a sturdy box.', howto:'1) Find a staircase or a single step. 2) Walk or jog up at a steady pace. 3) Come back down carefully — going down is harder on the knees. 4) Repeat continuously for the interval. With one step: step up and down alternating your lead foot each rep.', targets:'Calves, quads, glutes, heart rate. Easy sustained cardio.'},
+  {id:'c12', name:'Inchworm Walk',            muscle:'cardio',    equip:'bodyweight', diff:'beginner',     desc:'Stand up, bend forward and walk your hands out until you\'re in a push-up position, then walk your feet up to meet your hands, then stand back up. Repeat. Low-impact, gentle on joints, and great for warming up your whole body.', howto:'1) Stand tall. 2) Hinge at hips and place hands on floor in front of feet. 3) Walk hands forward to push-up position. 4) Pause (add a push-up for extra credit). 5) Walk feet up to hands. 6) Stand up. Repeat. Go slow and controlled.', targets:'Core, shoulders, hamstring stretch. Great warm-up.'},
+  // Cardio with equipment — only shown when user has that gear
+  {id:'c13', name:'Jump Rope',                muscle:'cardio',    equip:'other',      diff:'beginner',     desc:'Swing a rope over your head and jump over it as it passes under your feet. One of the best calorie-burning cardio tools ever. Stay on the balls of your feet, keep jumps small, and maintain a steady rhythm. Takes a bit of practice but worth it.', howto:'1) Hold one handle in each hand, rope behind you. 2) Swing rope overhead and jump over it as it reaches feet — small low jumps. 3) Stay on your toes, knees slightly bent. 4) Aim for steady rhythm over speed. Start with 30-second sets and build up.', targets:'Heart rate, calves, coordination, shoulders.'},
+  {id:'c14', name:'Battle Ropes',             muscle:'cardio',    equip:'other',      diff:'intermediate', desc:'Hold one thick rope in each hand (both anchored to a wall). Alternate slamming them up and down to create waves. Exhausting in the best way — your shoulders, arms, and lungs will all feel it within 30 seconds.', howto:'1) Stand feet shoulder-width, slight knee bend, one rope end in each hand. 2) Rapidly alternate raising and slamming each arm making waves travel down the rope. 3) Keep core tight and stay low. 4) Try 30–40 second bursts with rest in between.', targets:'Shoulders, arms, core, heart rate. Full-body blast.'},
+  {id:'c15', name:'Rowing Machine',           muscle:'cardio',    equip:'machine',    diff:'beginner',     desc:'Sit on the rowing machine, strap your feet in, and pull the handle toward your chest — leading with your legs first, then back, then arms. Rowing is 60% legs so don\'t just yank with your arms. Smooth and powerful. Very easy on the joints.', howto:'1) Sit down, strap feet in, grab handle. 2) Start with knees bent, back slightly forward. 3) Push hard with legs first. 4) As legs straighten, lean back slightly and pull handle to lower chest. 5) Reverse: arms forward, lean forward, bend knees, slide back. Aim for smooth powerful strokes.', targets:'Legs, back, arms, core, heart. One of the most complete cardio machines.'},
+  {id:'c16', name:'Stationary Bike',          muscle:'cardio',    equip:'machine',    diff:'beginner',     desc:'Sit on the stationary bike and pedal at a steady pace. Adjust the seat so your knee is slightly bent at the bottom of each pedal stroke. Very easy on the joints and great for any fitness level. Use it slow for long sessions or fast for short intervals.', howto:'1) Adjust seat height — slight knee bend at bottom of stroke. 2) Start pedaling at comfortable resistance. 3) Keep back straight, not hunched. 4) For intervals: easy 2 min, hard 1 min, repeat. For steady: maintain a moderate pace the whole time.', targets:'Quads, hamstrings, calves, heart rate. Excellent low-impact cardio.'},
+  {id:'c17', name:'Treadmill Run',            muscle:'cardio',    equip:'machine',    diff:'beginner',     desc:'Walk or run on a moving belt at whatever speed works for you. Start slow and increase gradually. The treadmill controls your pace making it easier to stay consistent. Great for any fitness level — you choose the speed.', howto:'1) Step onto side rails first, start belt slowly. 2) Step onto moving belt. 3) Walk to find your rhythm, then increase speed. 4) Hold rails only if you need balance — don\'t lean on them normally. 5) Cool down by slowing to a walk for last 2–3 minutes.', targets:'Heart, legs, calves, full lower body.'},
+  {id:'c18', name:'Bike Sprint Intervals',    muscle:'cardio',    equip:'machine',    diff:'advanced',     desc:'Pedal as hard and fast as possible for 20–30 seconds, then recover at easy pace for 40–60 seconds. Repeat. This style (called HIIT) burns fat and improves fitness faster than steady cardio — but it\'s genuinely hard. Give everything during the sprint portions.', howto:'1) Warm up easy 3–5 minutes. 2) Crank resistance up and pedal as hard as you can for 20–30 seconds. 3) Drop resistance, easy pace for 40–60 seconds recovery. 4) Repeat 6–10 rounds. 5) Cool down 3–5 minutes. You should barely be able to speak during sprints.', targets:'Quads, heart, calorie burn. Advanced fat loss and conditioning.'},
+  {id:'c19', name:'Kettlebell Cardio Flow',   muscle:'cardio',    equip:'kettlebell', diff:'intermediate', desc:'Move through kettlebell swings, cleans, and presses back-to-back with little rest. The non-stop nature makes it cardio even though you\'re using weights. Pick a weight you can control safely and keep moving continuously.', howto:'1) Start with 10 kettlebell swings (hip hinge, swing to shoulder height). 2) Move to 5 cleans each side (pull to rack at shoulder). 3) Finish with 5 presses each side (push to overhead). 4) Rest 60–90 seconds. Repeat 3–5 times.', targets:'Full body — back, glutes, shoulders, arms. Heart rate stays high.'},
+  {id:'c20', name:'Box Jumps',                muscle:'cardio',    equip:'box',        diff:'intermediate', desc:'Stand in front of a sturdy box, bend knees, swing arms, and jump onto it landing softly with both feet. Step back down (don\'t jump off). Builds explosive leg power while spiking your heart rate. Use a shorter box if you\'re new to this.', howto:'1) Stand 6–12 inches from box, feet shoulder-width. 2) Bend knees and swing arms back. 3) Explode upward and forward, arms driving up. 4) Land softly on box with bent knees — absorb impact quietly. 5) Stand fully upright. 6) Step one foot at a time back down.', targets:'Quads, glutes, calves, explosive power, heart rate.'},
 ];
+
 
 /* ═══════════════════════════════════════════════════════════════
    STORAGE
@@ -1825,7 +2031,7 @@ function applyTheme(dark){
   sTheme(dark?'dark':'light');
   ge('themeChk').checked=dark;
   if(ge('themeChk2'))ge('themeChk2').checked=dark;
-  if(curPage==='track')setTimeout(drawCharts,60);
+  if(curPage==='track'){setTimeout(()=>{drawCharts();const logs=gWtLogs();if(logs.length)drawWeightChart(logs,uLabel());},60);}
 }
 ge('themeChk').addEventListener('change',()=>applyTheme(ge('themeChk').checked));
 
@@ -1970,7 +2176,9 @@ ge('libCustomBtn').addEventListener('click',openCustomEx);
 function showEx(id){
   const e=getAllEx().find(x=>x.id===id);if(!e)return;
   ge('exDetName').textContent=e.name;
-  ge('exDetDesc').textContent=e.desc;
+  const howtoHtml=e.howto?`<div style="margin-top:.75rem"><div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--t3);margin-bottom:.3rem">How to do it</div><p style="font-size:.84rem;line-height:1.75;white-space:pre-line">${esc(e.howto)}</p></div>`:'';
+  const targetsHtml=e.targets?`<div style="margin-top:.65rem"><div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--t3);margin-bottom:.25rem">What it works</div><p style="font-size:.84rem;color:var(--t2)">${esc(e.targets)}</p></div>`:'';
+  ge('exDetDesc').innerHTML=`<span style="line-height:1.8">${esc(e.desc)}</span>${howtoHtml}${targetsHtml}`;
   ge('exDetTags').innerHTML=bm(e.muscle)+be(e.equip)+bd(e.diff)+(e.custom?'<span class="custom-badge">Custom</span>':'');
   const pr=gPRs()[id];
   const prEl=ge('exDetPR');
@@ -2181,9 +2389,20 @@ function openAIGen(){
   document.querySelectorAll('#ovAIGen .equip-btn').forEach(b=>b.classList.remove('sel'));
   // Build muscle buttons
   ge('aigenMuscles').innerHTML=ALL_MUSCLES.map(m=>`<button class="msel-btn" data-muscle="${m}">${MICONS[m]||'💪'} ${cap(m)}</button>`).join('');
-  // Build equip buttons
-  const EQS=['bodyweight','dumbbell','barbell','machine','band','kettlebell','cable','other'];
-  ge('aigenEquips').innerHTML=EQS.map(e=>`<button class="equip-btn" data-equip="${e}">${cap(e)}</button>`).join('');
+  // Build equip buttons — include special gear so users can explicitly unlock those exercises
+  const EQS=[
+    {val:'bodyweight', label:'🤸 Bodyweight'},
+    {val:'dumbbell',   label:'🏋️ Dumbbells'},
+    {val:'barbell',    label:'🔩 Barbell'},
+    {val:'machine',    label:'⚙️ Machines'},
+    {val:'band',       label:'🔁 Bands'},
+    {val:'kettlebell', label:'🫙 Kettlebell'},
+    {val:'cable',      label:'🔗 Cable'},
+    {val:'pullup_bar', label:'🚪 Pull-Up Bar'},
+    {val:'box',        label:'📦 Plyo Box'},
+    {val:'other',      label:'➕ Other (rope etc.)'},
+  ];
+  ge('aigenEquips').innerHTML=EQS.map(e=>`<button class="equip-btn" data-equip="${e.val}">${e.label}</button>`).join('');
   ge('aigenBack').style.display='none';
   ge('aigenNext').textContent='Next →';
   ge('aigenBar').style.width='0%';
@@ -2220,35 +2439,296 @@ function aigenPrev(){
 }
 
 function genWorkout(){
-  const {diff,dur,muscles,equips}=AG;const allEx=getAllEx();
-  const target=Math.max(3,Math.min(12,Math.round(dur/9)));
-  const sM={beginner:2,intermediate:3,advanced:4},rM={beginner:12,intermediate:10,advanced:8},restM={beginner:90,intermediate:60,advanced:45};
-  const sets=sM[diff]||3,reps=rM[diff]||10,rest=restM[diff]||60;
-  let pool=allEx.filter(e=>{
-    const mm=muscles.includes(e.muscle);
-    const em=equips.includes(e.equip)||e.equip==='bodyweight';
-    const dm=diff==='beginner'?e.diff==='beginner':diff==='advanced'?e.diff!=='beginner':e.diff!=='advanced';
-    return mm&&em&&dm;
-  });
-  if(pool.length<3)pool=allEx.filter(e=>muscles.includes(e.muscle));
-  if(pool.length<3)pool=[...allEx].sort(()=>Math.random()-.5);
-  const sh=[...pool].sort(()=>Math.random()-.5);
-  const picked=[];const used=new Set();
-  for(const ex of sh){if(picked.length>=target)break;if(!used.has(ex.muscle)||picked.length>=muscles.length){picked.push(ex);used.add(ex.muscle)}}
-  for(const ex of sh){if(picked.length>=target)break;if(!picked.find(p=>p.id===ex.id))picked.push(ex)}
-  return picked.slice(0,target).map(ex=>{
-    const rec=calcRec(ex.id,reps);
-    const defRec=getDefaultRec(ex.id,sets,reps,diff);
-    const w=rec!==null?rec:(defRec?.weight||0);
-    return({exId:ex.id,sets,reps,weight:w,rest});
+  const {diff,dur,muscles,equips}=AG;
+  const allEx=getAllEx();
+
+  // ── Equipment matching ────────────────────────────────────────
+  // 'bodyweight' exercises are ALWAYS available (no gear needed)
+  // Equipment-specific gear (box, pullup_bar, etc.) only if user explicitly selected it
+  // We map user-facing equip labels to what's in the DB
+  const equipSet=new Set(equips);
+
+  // A user who picks 'other' gets jump rope, battle ropes etc.
+  // A user who picks 'bodyweight' does NOT get box jumps or pullup_bar exercises
+  function equipOk(ex){
+    if(ex.equip==='bodyweight') return true;           // always available
+    if(ex.equip==='pullup_bar') return equipSet.has('pullup_bar'); // must be explicit
+    if(ex.equip==='box')        return equipSet.has('box');         // must be explicit
+    return equipSet.has(ex.equip);
+  }
+
+  // ── Difficulty as intensity, not a hard filter ────────────────
+  // Any exercise can appear at any difficulty level.
+  // We SCORE exercises: exact diff match scores highest, adjacent is ok, opposite is least preferred.
+  // This way a beginner still gets easier exercises but an intermediate can get beginner ones too
+  const diffScore={
+    beginner:    {beginner:3, intermediate:2, advanced:1},
+    intermediate:{beginner:2, intermediate:3, advanced:2},
+    advanced:    {beginner:1, intermediate:2, advanced:3},
+  };
+  function getDiffScore(ex){ return (diffScore[diff]||diffScore.intermediate)[ex.diff]||1; }
+
+  // ── Cardio-specific logic ─────────────────────────────────────
+  // Cardio workouts: each "exercise" is actually a ROUND/INTERVAL, not a set×reps structure
+  // Use time-based format: duration intervals rather than sets×reps
+  const isCardio = muscles.length===1 && muscles[0]==='cardio';
+  const hasCardio = muscles.includes('cardio');
+
+  // ── Pool: must match muscle group AND pass equipment check ────
+  let pool = allEx.filter(ex => muscles.includes(ex.muscle) && equipOk(ex));
+
+  // Graceful fallback: if we got fewer than 3, relax equipment but keep muscle
+  if(pool.length < 3){
+    pool = allEx.filter(ex => muscles.includes(ex.muscle) && (ex.equip==='bodyweight'||equipSet.has(ex.equip)));
+  }
+  // Last resort: just target muscle with any equipment
+  if(pool.length < 3){
+    pool = allEx.filter(ex => muscles.includes(ex.muscle));
+  }
+
+  // ── Shuffle with diff weighting ───────────────────────────────
+  // Sort pool: primary=diffScore desc, then shuffle within same score bucket
+  pool = pool
+    .map(ex=>({ex, score: getDiffScore(ex) + Math.random()*0.9}))
+    .sort((a,b)=>b.score - a.score)
+    .map(x=>x.ex);
+
+  // ── Target exercise count ─────────────────────────────────────
+  const target = Math.max(3, Math.min(12, Math.round(dur/9)));
+
+  // ── Sets / reps / rest based on difficulty ────────────────────
+  // Intermediate/advanced using a 'beginner' exercise → compensate with more sets or reps
+  const setsMap  = {beginner:2, intermediate:3, advanced:4};
+  const repsMap  = {beginner:12, intermediate:10, advanced:8};
+  const restMap  = {beginner:90, intermediate:60, advanced:45};
+  const sets = setsMap[diff]||3;
+  const reps = repsMap[diff]||10;
+  const rest = restMap[diff]||60;
+
+  // ── Smart picking: spread across muscles, avoid repeats ──────
+  const picked = [];
+  const usedIds = new Set();
+  const usedMuscles = new Map(); // muscle → count
+
+  // Pass 1: ensure each selected muscle group gets at least 1 exercise
+  for(const muscle of muscles){
+    const musclePool = pool.filter(ex=>ex.muscle===muscle && !usedIds.has(ex.id));
+    if(musclePool.length && picked.length < target){
+      picked.push(musclePool[0]);
+      usedIds.add(musclePool[0].id);
+      usedMuscles.set(muscle,(usedMuscles.get(muscle)||0)+1);
+    }
+  }
+
+  // Pass 2: fill remaining slots with best-scored exercises, avoiding exact duplicates
+  for(const ex of pool){
+    if(picked.length >= target) break;
+    if(usedIds.has(ex.id)) continue;
+    // Don't pile more than 3 exercises from the same muscle unless it's the only muscle selected
+    const muscleCount = usedMuscles.get(ex.muscle)||0;
+    const muscleMax = muscles.length===1 ? target : 3;
+    if(muscleCount >= muscleMax) continue;
+    picked.push(ex);
+    usedIds.add(ex.id);
+    usedMuscles.set(ex.muscle,(usedMuscles.get(ex.muscle)||0)+1);
+  }
+
+  // ── Cardio-specific: adjust to time-based intervals ───────────
+  return picked.slice(0, target).map(ex=>{
+    const rec = calcRec(ex.id, reps);
+    const defRec = getDefaultRec(ex.id, sets, reps, diff);
+    const w = rec!==null ? rec : (defRec?.weight||0);
+
+    // For cardio muscle: use time-based format instead of sets×reps
+    if(ex.muscle==='cardio'){
+      const durSec = diff==='beginner'?30:diff==='advanced'?60:45;
+      const rounds = diff==='beginner'?3:diff==='advanced'?5:4;
+      const cardioRest = diff==='beginner'?45:diff==='advanced'?20:30;
+      return {exId:ex.id, sets:rounds, reps:durSec, weight:0, rest:cardioRest, timed:true};
+    }
+
+    // For a 'beginner'-tagged exercise picked for an advanced user: bump reps/sets
+    let adjSets=sets, adjReps=reps, adjRest=rest;
+    if(diff!=='beginner' && ex.diff==='beginner'){
+      adjSets = Math.min(sets+1, 5);
+      adjReps = diff==='advanced' ? reps+4 : reps+2;
+    }
+
+    return {exId:ex.id, sets:adjSets, reps:adjReps, weight:w, rest:adjRest};
   });
 }
 
 function renderAIPreview(){
   const allEx=getAllEx();
-  const rows=AG.result.map((we,i)=>{const ex=allEx.find(e=>e.id===we.exId);if(!ex)return'';return `<div style="display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--border)"><div style="width:1.6rem;text-align:center;font-size:.78rem;font-weight:700;color:var(--t3)">${i+1}</div><div style="flex:1"><div style="font-weight:700;font-size:.86rem">${esc(ex.name)}</div><div style="font-size:.74rem;color:var(--t2)">${we.sets} sets × ${we.reps} reps · ${we.rest}s rest</div></div>${bm(ex.muscle)}</div>`}).join('');
-  ge('aigenPreview').innerHTML=`<div style="border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;margin-bottom:.85rem"><div style="padding:.72rem 1rem;background:var(--bg2);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--t2)">${AG.result.length} exercises · ~${estDur(AG.result)} min · ${cap(AG.diff)}</div><div style="padding:.5rem 1rem">${rows}</div></div>`;
-  if(!ge('aigenName').value)ge('aigenName').value=`AI ${AG.muscles.slice(0,2).map(cap).join(' & ')} — ${cap(AG.diff)}`;
+  const rows=AG.result.map((we,i)=>{
+    const ex=allEx.find(e=>e.id===we.exId);
+    if(!ex)return'';
+    const scheme=we.timed
+      ?`${we.sets} rounds × ${we.reps}s work · ${we.rest}s rest`
+      :`${we.sets} sets × ${we.reps} reps · ${we.rest}s rest`;
+    const diffLabel=ex.diff==='beginner'?'🟢 Easy':ex.diff==='advanced'?'🔴 Hard':'🟡 Moderate';
+    return `<div class="aig-ex-row" id="aigRow_${i}">
+      <div class="aig-ex-num">${i+1}</div>
+      <div class="aig-ex-body">
+        <div class="aig-ex-top">
+          <div>
+            <div class="aig-ex-name">${esc(ex.name)}</div>
+            <div class="aig-ex-scheme">${scheme}</div>
+          </div>
+          <div class="aig-ex-acts">
+            ${bm(ex.muscle)}
+            <button class="btn btn-sm aig-info-btn" onclick="showExInfo('${ex.id}')" title="How to do this exercise">ℹ How to do it</button>
+            <button class="btn btn-sm aig-remove-btn" onclick="removeAIExercise(${i})" title="Remove this exercise">✕</button>
+          </div>
+        </div>
+        <div class="aig-diff-hint">${diffLabel} · ${ex.equip==='bodyweight'?'No equipment':'Needs: '+cap(ex.equip)}</div>
+      </div>
+    </div>`;
+  }).join('');
+  const timedNote=AG.result.some(w=>w.timed)?`<div class="aig-timed-note">⏱ Timed intervals — do each movement for the listed seconds, rest, then next round.</div>`:'';
+  ge('aigenPreview').innerHTML=`<div class="aig-preview-box">
+    <div class="aig-preview-hd">${AG.result.length} exercises · ~${estDur(AG.result)} min · ${cap(AG.diff)}</div>
+    ${timedNote}
+    <div class="aig-ex-list">${rows}</div>
+    ${AG.result.length===0?'<div class="empty" style="padding:1rem"><div class="empty-title">All exercises removed</div><div class="empty-sub">Go back and regenerate, or add exercises below.</div></div>':''}
+  </div>
+  <div class="aig-add-panel" id="aigAddPanel">
+    <div class="aig-add-panel-hd" onclick="toggleAigAdd()">
+      <div class="aig-add-panel-hd-label">
+        <span style="font-size:1.1rem">＋</span> Add an exercise to this workout
+      </div>
+      <span id="aigAddChevron" style="color:var(--acc);font-size:.85rem;font-weight:700;transition:transform .2s">▾</span>
+    </div>
+    <div class="aig-add-panel-body" id="aigAddBody" style="display:none">
+      <div class="aig-add-search">
+        <input type="search" class="fc aig-add-search-inp" id="aigAddQ" placeholder="🔍 Search exercises…" oninput="renderAigAddList()">
+      </div>
+      <div class="aig-add-equip-chips" id="aigAddEquipChips">
+        <button class="aig-add-equip-chip on" data-equip="" onclick="setAigEquip(this,'')">All</button>
+        <button class="aig-add-equip-chip" data-equip="bodyweight" onclick="setAigEquip(this,'bodyweight')">🤸 Bodyweight</button>
+        <button class="aig-add-equip-chip" data-equip="dumbbell" onclick="setAigEquip(this,'dumbbell')">🏋️ Dumbbells</button>
+        <button class="aig-add-equip-chip" data-equip="barbell" onclick="setAigEquip(this,'barbell')">🔩 Barbell</button>
+        <button class="aig-add-equip-chip" data-equip="cable" onclick="setAigEquip(this,'cable')">🔗 Cable</button>
+        <button class="aig-add-equip-chip" data-equip="machine" onclick="setAigEquip(this,'machine')">⚙️ Machine</button>
+        <button class="aig-add-equip-chip" data-equip="band" onclick="setAigEquip(this,'band')">🔁 Bands</button>
+        <button class="aig-add-equip-chip" data-equip="kettlebell" onclick="setAigEquip(this,'kettlebell')">🫙 Kettlebell</button>
+      </div>
+      <div class="aig-add-ex-list" id="aigAddExList"></div>
+    </div>
+  </div>`;
+  // populate add list immediately
+  renderAigAddList();
+  if(!ge('aigenName').value){
+    const muscleLabel=AG.muscles.slice(0,2).map(cap).join(' & ');
+    ge('aigenName').value=`AI ${muscleLabel} — ${cap(AG.diff)}`;
+  }
+}
+
+function removeAIExercise(i){
+  AG.result.splice(i,1);
+  renderAIPreview();
+  toast('Exercise removed','');
+}
+
+let _aigAddOpen=false;
+let _aigAddEquip='';
+
+function toggleAigAdd(){
+  _aigAddOpen=!_aigAddOpen;
+  const body=ge('aigAddBody');
+  const chev=ge('aigAddChevron');
+  if(body){body.style.display=_aigAddOpen?'block':'none';}
+  if(chev){chev.style.transform=_aigAddOpen?'rotate(180deg)':'';}
+  if(_aigAddOpen)renderAigAddList();
+}
+
+function setAigEquip(btn,equip){
+  _aigAddEquip=equip;
+  document.querySelectorAll('.aig-add-equip-chip').forEach(c=>c.classList.remove('on'));
+  btn.classList.add('on');
+  renderAigAddList();
+}
+
+function renderAigAddList(){
+  const listEl=ge('aigAddExList');if(!listEl)return;
+  const q=(ge('aigAddQ')?.value||'').toLowerCase();
+  const allEx=getAllEx();
+  // Filter by equip and search query; exclude already-added
+  const usedIds=new Set(AG.result.map(r=>r.exId));
+  const fil=allEx.filter(e=>{
+    if(usedIds.has(e.id))return false;
+    if(_aigAddEquip&&e.equip!==_aigAddEquip)return false;
+    if(q&&!e.name.toLowerCase().includes(q)&&!e.muscle.includes(q))return false;
+    return true;
+  }).slice(0,30);
+  if(!fil.length){listEl.innerHTML=`<div style="padding:.6rem 0;font-size:.82rem;color:var(--t3);text-align:center">No exercises found</div>`;return;}
+  const u=uLabel();
+  listEl.innerHTML=fil.map(e=>{
+    const diffIcon=e.diff==='beginner'?'🟢':e.diff==='advanced'?'🔴':'🟡';
+    return `<div class="aig-add-ex-row">
+      <div style="flex:1;min-width:0">
+        <div class="aig-add-ex-name">${esc(e.name)}</div>
+        <div class="aig-add-ex-meta">${diffIcon} ${cap(e.diff)} · ${bm(e.muscle)}</div>
+      </div>
+      <div style="display:flex;gap:.25rem;flex-shrink:0">
+        <button class="btn btn-sm aig-info-ico" onclick="showExInfo('${e.id}')" title="How to do this">ℹ</button>
+        <button class="btn btn-ok btn-sm" onclick="addToAIWorkout('${e.id}')">+ Add</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function addToAIWorkout(exId){
+  const ex=getAllEx().find(e=>e.id===exId);if(!ex)return;
+  // Use same sets/reps logic as genWorkout
+  const diff=AG.diff||'intermediate';
+  const setsMap={beginner:2,intermediate:3,advanced:4};
+  const repsMap={beginner:12,intermediate:10,advanced:8};
+  const restMap={beginner:90,intermediate:60,advanced:45};
+  const rec=calcRec(exId,repsMap[diff]||10);
+  const defRec=getDefaultRec(exId,setsMap[diff]||3,repsMap[diff]||10,diff);
+  const w=rec!==null?rec:(defRec?.weight||0);
+  const entry=ex.muscle==='cardio'
+    ?{exId,sets:diff==='beginner'?3:diff==='advanced'?5:4,reps:diff==='beginner'?30:diff==='advanced'?60:45,weight:0,rest:diff==='beginner'?45:diff==='advanced'?20:30,timed:true}
+    :{exId,sets:setsMap[diff]||3,reps:repsMap[diff]||10,weight:w,rest:restMap[diff]||60};
+  AG.result.push(entry);
+  renderAIPreview();
+  // re-open the add panel after re-render
+  _aigAddOpen=true;
+  const body=ge('aigAddBody');const chev=ge('aigAddChevron');
+  if(body)body.style.display='block';
+  if(chev)chev.style.transform='rotate(180deg)';
+  renderAigAddList();
+  toast(`${ex.name} added!`,'ok');
+}
+
+function showExInfo(exId){
+  const ex=getAllEx().find(e=>e.id===exId);
+  if(!ex)return;
+  const diffLabel=ex.diff==='beginner'?'🟢 Beginner — Easy to learn':ex.diff==='advanced'?'🔴 Advanced — Challenging':' 🟡 Intermediate — Some experience helps';
+  const howto=ex.howto||null;
+  const targets=ex.targets||null;
+  ge('exInfoName').textContent=ex.name;
+  ge('exInfoBody').innerHTML=`
+    <div class="exinfo-section">
+      <div class="exinfo-label">What it is</div>
+      <p class="exinfo-text">${esc(ex.desc)}</p>
+    </div>
+    ${howto?`<div class="exinfo-section">
+      <div class="exinfo-label">How to do it</div>
+      <p class="exinfo-text">${esc(howto)}</p>
+    </div>`:''}
+    ${targets?`<div class="exinfo-section">
+      <div class="exinfo-label">What it works</div>
+      <p class="exinfo-text">${esc(targets)}</p>
+    </div>`:''}
+    <div class="exinfo-section">
+      <div class="exinfo-label">Difficulty</div>
+      <p class="exinfo-text">${diffLabel}</p>
+    </div>
+    <div class="exinfo-tags">${bm(ex.muscle)} <span class="badge be">${esc(ex.equip)}</span></div>
+  `;
+  openOv('ovExInfo');
 }
 
 function saveAIWorkout(){
@@ -2350,14 +2830,53 @@ function renderBldEd(){
   ge('bldDur').textContent=estDur(bldExs)+' min';
   renderPicker();
 }
+let bldEquipFil='';
+let bldShowAll=false;
+const BLD_SHOW_N=8;
+
 function renderPicker(){
-  const q=ge('bldQ').value.toLowerCase();const allEx=getAllEx();
-  const fil=allEx.filter(e=>!q||e.name.toLowerCase().includes(q)||e.muscle.includes(q)).slice(0,20);
-  ge('bldPicker').innerHTML=fil.map(e=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--border)">
-    <div><span style="font-weight:600;font-size:.81rem">${esc(e.name)}</span> ${bm(e.muscle)}</div>
-    <button class="btn btn-p btn-sm" onclick="addBld('${e.id}')">+ Add</button>
-  </div>`).join('');
+  const q=ge('bldQ').value.toLowerCase();
+  const allEx=getAllEx();
+  const fil=allEx.filter(e=>{
+    const matchQ=!q||e.name.toLowerCase().includes(q)||e.muscle.includes(q)||e.equip.includes(q);
+    const matchEq=!bldEquipFil||e.equip===bldEquipFil;
+    return matchQ&&matchEq;
+  });
+  const shown=bldShowAll?fil:fil.slice(0,BLD_SHOW_N);
+  ge('bldPicker').innerHTML=shown.map(e=>{
+    const diffLabel=e.diff==='beginner'?'🟢':e.diff==='advanced'?'🔴':'🟡';
+    return `<div class="bld-picker-ex-row">
+      <div class="bld-picker-ex-info">
+        <div class="bld-picker-ex-name">${esc(e.name)}</div>
+        <div class="bld-picker-ex-meta">${diffLabel} ${cap(e.diff)} · ${bm(e.muscle)}</div>
+      </div>
+      <div class="bld-picker-ex-acts">
+        <button class="btn btn-sm aig-info-ico" onclick="showExInfo('${e.id}')" title="How to do this">ℹ</button>
+        <button class="btn btn-p btn-sm" onclick="addBld('${e.id}')">+ Add</button>
+      </div>
+    </div>`;
+  }).join('');
+  const moreEl=ge('bldPickerMore');
+  if(fil.length>BLD_SHOW_N&&!bldShowAll){
+    moreEl.innerHTML=`<button class="btn btn-g btn-sm" onclick="bldShowAll=true;renderPicker()">Show ${fil.length-BLD_SHOW_N} more…</button>`;
+  } else if(bldShowAll&&fil.length>BLD_SHOW_N){
+    moreEl.innerHTML=`<button class="btn btn-g btn-sm" onclick="bldShowAll=false;renderPicker()">Show less</button>`;
+  } else {
+    moreEl.innerHTML='';
+  }
 }
+
+// Equipment filter chips
+document.addEventListener('click',e=>{
+  const chip=e.target.closest('#bldEquipFilter .bld-equip-chip');
+  if(chip){
+    document.querySelectorAll('#bldEquipFilter .bld-equip-chip').forEach(c=>c.classList.remove('on'));
+    chip.classList.add('on');
+    bldEquipFil=chip.dataset.equip;
+    bldShowAll=false;
+    renderPicker();
+  }
+});
 function addBld(exId){
   if(bldExs.length>=20){toast('Max 20 exercises','warn');return}
   const rec=calcRec(exId,10);
@@ -2791,7 +3310,7 @@ function renderTrack(){
 async function delLog(e,id){e.stopPropagation();const ok=await confirm2('Delete this session?','Delete Log');if(!ok)return;dLog(id);renderTrack();toast('Deleted','bad')}
 
 // Charts
-function getCSS(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function getCSS(v){return getComputedStyle(document.body).getPropertyValue(v).trim()}
 function drawCharts(){drawBar();drawLine()}
 
 function drawBar(){
